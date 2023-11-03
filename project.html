@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gordon st coffee</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #233142;
+        border: 2px solid #455d7a;
+        padding: 20px;
+        font-size: 50px;
+        border-radius: 20px;
+        margin: 0 100px;
+      }
+      h2 {
+        text-align: center;
+        color: #233142;
+      }
+      span {
+        color: #f95959;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 40%;
+        border-radius: 40px;
+        border: 2px solid #233142;
+      }
+      p {
+        text-align: justify;
+        color: #233142;
+        line-height: 2;
+        margin: 0 100px;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: #f95959;
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+        font-weight: lighter;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        max-width: 300px;
+        margin: 0 auto;
+        color: #455d7a;
+        background-color: #f95959;
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 15px;
+        border: 2px solid #233142;
+        box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.5);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background-color: #455d7a;
+        color: #e3e3e3;
+      }
+      hr {
+        max-width: 60%;
+        color: #455d7a;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: #e3e3e3;
+        border-radius: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gordon st coffee</h1>
+      <h2>
+        <em>The most aromatic <span>coffee</span> in town</em>
+      </h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/102/092/original/2019-11-25.jpg?1698421188"
+      />
+      <br />
+      <p>
+        Gordon Street Coffee is a small batch coffee producer and roastery in
+        Glasgow and Edinburgh, Scotland. We roast coffee for sit in or take
+        away. Come round for a fresh croissant and a cup of coffee in the heart
+        of Edinburgh.
+      </p>
+      <hr />
+      <p>
+        <a href="https://www.gordonstcoffee.co.uk/"
+          >Learn more on the official website
+        </a>
+      </p>
+      <button><strong>Order coffee ☕</strong></button>
+    </div>
+    <script>
+      let orderButton = document.querySelector("button");
+      orderButton.addEventListener("click", order);
+      function order() {
+        let name = prompt("What is your name?");
+        let quantity = prompt("How many packs would you like to order?");
+        if (quantity <= 10) {
+          alert(
+            `Thank you for your order ${name}. You have ordered ${quantity} packs. We will ship it shortly.`
+          );
+        } else {
+          alert(
+            `Dear ${name}, unfortunately, we cannnot accept orders over 10 packs.`
+          );
+        }
+      }
+    </script>
+  </body>
+</html>
